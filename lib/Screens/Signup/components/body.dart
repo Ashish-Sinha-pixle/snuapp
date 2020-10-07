@@ -6,6 +6,7 @@ import 'package:snuapp/components/already_have_an_account_acheck.dart';
 import 'package:snuapp/components/rounded_button.dart';
 import 'package:snuapp/components/rounded_input_field.dart';
 import 'package:snuapp/components/rounded_password_field.dart';
+import 'package:snuapp/Screens/Signup_next/Signup_next.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:share/share.dart';
 
@@ -46,7 +47,16 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "SIGNUP",
-              press: () {},
+              press: () {
+                Navigator.push(
+                context,
+                MaterialPageRoute(
+                builder: (context) {
+                  return SignUpNext() ;
+                  },
+                 ),
+                );
+                },
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
